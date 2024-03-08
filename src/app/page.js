@@ -1,4 +1,4 @@
-import { SignUpButton, SignedIn } from "@clerk/nextjs";
+import { SignUpButton, SignedOut } from "@clerk/nextjs";
 import Link from "next/link";
 import Image from "next/image";
 import { SignInButton } from "@clerk/nextjs";
@@ -16,7 +16,7 @@ export default function Home() {
             alt="ScoreCard Logo"
           />
         </div>
-        <SignedIn>
+        <SignedOut>
           <div className="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
             <h1 className="text-3xl font-semibold text-center mb-8">
               Welcome to ScoreCard
@@ -39,7 +39,7 @@ export default function Home() {
               </p>
             </div>
           </div>
-        </SignedIn>
+        </SignedOut>
       </div>
     </main>
   );

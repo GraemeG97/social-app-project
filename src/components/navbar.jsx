@@ -28,6 +28,12 @@ export default function NavBar() {
           Posts
         </Link>
         <Link
+          href="new-post"
+          className=" hover:text-gray-900 hover:shadow-md rounded-md px-4 py-2 bg-gray-200 hover:bg-gray-300"
+        >
+          Create Post
+        </Link>
+        <Link
           href="/userProfile"
           className=" hover:text-gray-900 hover:shadow-md rounded-md px-4 py-2 bg-gray-200 hover:bg-gray-300"
         >
