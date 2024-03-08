@@ -10,12 +10,12 @@ export default async function Page() {
       <h1 className="text-3xl font-bold text-center mb-8">
         Golf Club Reviews:
       </h1>
-      <div className="flex flex-row flex-wrap justify-center">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {clubs.map((club) => (
-          <div key={club.id} className="m-12">
+          <div key={club.id} className="bg-white rounded-lg shadow-lg p-4">
             <h3 className="text-2xl font-extrabold mb-2">{club.name}</h3>
             <Image
-              className="w-32 h-32 object-cover rounded-md mb-2"
+              className="w-full h-48 object-cover rounded-md mb-2"
               src={club.imageurl}
               width={75}
               height={75}
@@ -24,7 +24,7 @@ export default async function Page() {
 
             <Link
               href={`/posts/${club.id}`}
-              className="text-blue-700 font-semibold text-xlg"
+              className="text-blue-700 font-semibold text-lg hover:underline"
             >
               Read More
             </Link>

@@ -22,13 +22,15 @@ export default function Home() {
               Welcome to ScoreCard
             </h1>
 
-            <div>
+            <div className="mb-6">
               <SignInButton>
-                <button>Sign In</button>
+                <button className="w-full px-4 py-2 bg-blue-500 text white font-semibold rounded md hover:bg-blue-600 transition duration-300">
+                  Sign In
+                </button>
               </SignInButton>
             </div>
             <div>
-              <p className="text-center">
+              <p className="text-center text gray-700">
                 Don&apos;t have an account?
                 <SignUpButton>
                   <button className="text-blue-500 hover:underline ml-1">

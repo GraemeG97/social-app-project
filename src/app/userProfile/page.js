@@ -1,9 +1,7 @@
 import { UserProfile } from "@clerk/nextjs";
 
-export default function Page() {
-  <>
-    <div className="mb-15">
-      <UserProfile />
-    </div>
-  </>;
-}
+const UserProfilePage = () => (
+  <UserProfile path="/userProfile" routing="path" />
+);
+
+export default UserProfilePage;

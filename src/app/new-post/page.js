@@ -19,55 +19,94 @@ export default async function Page() {
   }
 
   return (
-    <div>
-      <div className="mt-6 mb-6 flex justify-center">
-        <h2 className="text-xl font-extrabold">Add Golf Club Review</h2>
-      </div>
-      <div className="flex justify-center">
-        <div className="w-96 h-full flex justify-center bg-gray-700 rounded-lg">
-          <form
-            action={handleAddPost}
-            className="w-80 flex flex-col justify-center"
-          >
-            <label className="text-white mt-2 mb-2">Name of Golf Club</label>
+    <div className="mt-8 flex flex-col items-center">
+      <h2 className="text-3xl font-bold mb-4">Add Golf Club Review</h2>
+      <div className="w-96 bg-gray-100 rounded-lg p-8">
+        <form action={handleAddPost} className="space-y-4">
+          <div>
+            <label
+              htmlFor="name"
+              className="block text-gray-700 font-semibold mb-2"
+            >
+              Name of Golf Club
+            </label>
             <input
-              className="px-1 rounded text-gray-700"
+              id="name"
+              type="text"
               name="name"
+              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
               placeholder="Name"
             />
-
-            <label className="text-white mt-2 mb-2">Price</label>
+          </div>
+          <div>
+            <label
+              htmlFor="price"
+              className="block text-gray-700 font-semibold mb-2"
+            >
+              Price
+            </label>
             <input
-              className="px-1 rounded text-gray-700"
+              id="price"
+              type="text"
               name="price"
+              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
               placeholder="e.g 299.00"
             />
-
-            <label className="text-white mt-2 mb-2">Review/Description</label>
-            <input
-              className="px-1 rounded text-gray-700"
+          </div>
+          <div>
+            <label
+              htmlFor="description"
+              className="block text-gray-700 font-semibold mb-2"
+            >
+              Review/Description
+            </label>
+            <textarea
+              id="description"
               name="description"
-              placeholder="review of club"
-            />
-
-            <label className="text-white mt-2 mb-2">Image URL</label>
+              rows="3"
+              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
+              placeholder="Review of club"
+            ></textarea>
+          </div>
+          <div>
+            <label
+              htmlFor="imageurl"
+              className="block text-gray-700 font-semibold mb-2"
+            >
+              Image URL
+            </label>
             <input
-              className="px-1 rounded text-gray-700"
+              id="imageurl"
+              type="text"
               name="imageurl"
-              placeholder="paste in web address of image"
+              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
+              placeholder="Paste in web address of image"
             />
-
-            <label className="text-white mt-2 mb-2">Type of Club</label>
+          </div>
+          <div>
+            <label
+              htmlFor="type"
+              className="block text-gray-700 font-semibold mb-2"
+            >
+              Type of Club
+            </label>
             <input
-              className="px-1 rounded text-gray-700"
+              id="type"
+              type="text"
               name="type"
+              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
               placeholder="Driver or Putter etc"
             />
-            <div className="flex justify-center mt-4">
-              <SubmitButton thing="club" />
-            </div>
-          </form>
-        </div>
+          </div>
+          <div className="flex justify-center">
+            <button
+              type="submit"
+              className="px-6 py-3 bg-blue-500 text-white font-semibold rounded-md hover:bg-blue-600 transition duration-300"
+            >
+              Submit
+            </button>
+          </div>
+        </form>
       </div>
     </div>
   );
