@@ -22,10 +22,10 @@ export default function NavBar() {
       </div>
       <div className="hidden md:flex items-center space-x-6 ml-auto transition-all duration-500 ease-in-out">
         <Link
-          href="/feed"
+          href="/posts"
           className=" hover:text-gray-900 hover:shadow-md rounded-md px-4 py-2 bg-gray-200 hover:bg-gray-300"
         >
-          Feed
+          Posts
         </Link>
         <Link
           href="/userProfile"
@@ -41,7 +41,9 @@ export default function NavBar() {
           Notifications
         </Link>
       </div>
-      {userId ? <UserButton /> : <SignInButton />}
+      <div className="px-4 py-2">
+        {userId ? <UserButton /> : <SignInButton />}
+      </div>
     </nav>
   );
 }

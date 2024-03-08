@@ -1,6 +1,7 @@
-import { UserButton } from "@clerk/nextjs";
+import { SignUpButton, SignedIn } from "@clerk/nextjs";
 import Link from "next/link";
 import Image from "next/image";
+import { SignInButton } from "@clerk/nextjs";
 
 export default function Home() {
   return (
@@ -15,25 +16,30 @@ export default function Home() {
             alt="ScoreCard Logo"
           />
         </div>
-        <div className="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
-          <h1 className="text-3xl font-semibold text-center mb-8">
-            Welcome to ScoreCard
-          </h1>
-          <Link href="/sign-in">
-            <button className="bg-blue-500 text-white px-6 py-3 rounded-md w-full mb-4 transition duration-300 hover:bg-blue-600">
-              Sign In
-            </button>
-          </Link>
-          <p className="text-center">
-            Don&apos;t have an account?
-            <Link
-              href="/sign-up"
-              className="text-blue-500 hover:underline ml-1"
-            >
-              Sign up here
-            </Link>
-          </p>
-        </div>
+        <SignedIn>
+          <div className="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
+            <h1 className="text-3xl font-semibold text-center mb-8">
+              Welcome to ScoreCard
+            </h1>
+
+            <div>
+              <SignInButton>
+                <button>Sign In</button>
+              </SignInButton>
+            </div>
+            <div>
+              <p className="text-center">
+                Don&apos;t have an account?
+                <SignUpButton>
+                  <button className="text-blue-500 hover:underline ml-1">
+                    {" "}
+                    Sign Up
+                  </button>
+                </SignUpButton>
+              </p>
+            </div>
+          </div>
+        </SignedIn>
       </div>
     </main>
   );
