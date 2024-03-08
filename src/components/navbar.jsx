@@ -39,13 +39,6 @@ export default function NavBar() {
         >
           Profile
         </Link>
-
-        <Link
-          href="/notifications"
-          className=" hover:text-gray-900 hover:shadow-md rounded-md px-4 py-2 bg-gray-200 hover:bg-gray-300"
-        >
-          Notifications
-        </Link>
       </div>
       <div className="px-4 py-2">
         {userId ? <UserButton /> : <SignInButton />}
