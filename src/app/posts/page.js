@@ -6,10 +6,11 @@ export default async function Page() {
   const clubs = (await sql`SELECT * FROM golf_equipment`).rows;
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen p-6 bg-cover bg-center bg-opacity-75">
-      <h1 className="text-3xl font-bold text-center mb-8">
-        Golf Club Reviews:
+    <div className="flex flex-col items-center justify-center min-h-screen p-6 bg-gray-100">
+      <h1 className="text-4xl font-bold text-center mb-8 text-blue-500 animate-pulse shadow-lg">
+        Latest Posts
       </h1>
+
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {clubs.map((club) => (
           <div key={club.id} className="bg-white rounded-lg shadow-lg p-4">

@@ -1,6 +1,7 @@
 import { sql } from "@vercel/postgres";
 import { revalidatePath } from "next/cache";
 import SubmitButton from "@/components/SubmitButton";
+import { redirect } from "next";
 
 export default async function Page() {
   async function handleAddPost(formData) {

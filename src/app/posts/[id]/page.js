@@ -1,3 +1,4 @@
+import DeleteButton from "@/components/DeleteButton";
 import { sql } from "@vercel/postgres";
 import Image from "next/image";
 
@@ -23,6 +24,9 @@ export default async function Page({ params }) {
       <p className="text-lg mb-4">{club.description}</p>
       <br></br>
       <p className="text-xl font-semibold">£ {club.price}</p>
+      <div>
+        <DeleteButton id={club.id} />
+      </div>
     </div>
   );
 }
