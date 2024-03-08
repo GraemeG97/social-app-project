@@ -1,7 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
+import { UserButton } from "@clerk/nextjs";
+import { SignInButton } from "@clerk/nextjs";
+import { auth } from "@clerk/nextjs";
 
 export default function NavBar() {
+  const { userId } = auth();
+  console.log(userId);
   return (
     <nav className="flex items-center justify-between px-6 bg-gray-100">
       <div className="flex items-center space-x-4">
@@ -28,6 +33,7 @@ export default function NavBar() {
         >
           Profile
         </Link>
+
         <Link
           href="/notifications"
           className=" hover:text-gray-900 hover:shadow-md rounded-md px-4 py-2 bg-gray-200 hover:bg-gray-300"
@@ -35,6 +41,7 @@ export default function NavBar() {
           Notifications
         </Link>
       </div>
+      {userId ? <UserButton /> : <SignInButton />}
     </nav>
   );
 }

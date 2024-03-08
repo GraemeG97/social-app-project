@@ -1,5 +1,7 @@
 export default function Page() {
   <div>
-    <p>show posts for the golf club review and any other posts</p>
+    <h1 className="text-black">
+      show posts for the golf club review and any other posts
+    </h1>
   </div>;
 }
