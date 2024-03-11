@@ -1,6 +1,5 @@
 import { sql } from "@vercel/postgres";
 import { revalidatePath } from "next/cache";
-import SubmitButton from "@/components/SubmitButton";
 import { redirect } from "next";
 
 export default async function Page() {
@@ -21,7 +20,7 @@ export default async function Page() {
 
   return (
     <div className="mt-8 flex flex-col items-center">
-      <h2 className="text-3xl font-bold mb-4">Add Golf Club Review</h2>
+      <h2 className="text-3xl font-bold mb-4">Add Post</h2>
       <div className="w-96 bg-gray-100 rounded-lg p-8">
         <form action={handleAddPost} className="space-y-4">
           <div>

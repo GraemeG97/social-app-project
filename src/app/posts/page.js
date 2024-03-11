@@ -6,7 +6,7 @@ export default async function Page() {
   const clubs = (await sql`SELECT * FROM golf_equipment`).rows;
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen p-6 bg-gray-100">
+    <div className="flex flex-col items-center justify-center min-h-screen p-6 bg-gray-50">
       <h1 className="text-4xl font-bold text-center mb-8 text-blue-500 animate-pulse shadow-lg">
         Latest Posts
       </h1>
